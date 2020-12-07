@@ -1,0 +1,11 @@
+<div class="main-div">
+    <mat-card class="search-card" style="display: flex; justify-content: center">
+        <form class="example-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Surgeon</mat-label>
+                <input type="name" matInput formControlName="searchInput" class="text-center" placeholder="Ex: Tobas">
+            </mat-form-field>
+            <button mat-raised-button color="primary" style="margin-left: 25px" [disabled]="!searchForm.valid">Search</button>
+        </form>
+    </mat-card>
+</div>

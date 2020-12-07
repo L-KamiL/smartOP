@@ -1,0 +1,49 @@
+<cdk-virtual-scroll-viewport itemSize="53" class="wrapper mat-elevation-z2">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Specialty Column -->
+        <ng-container matColumnDef="specialty">
+            <th mat-header-cell *matHeaderCellDef> Specialty </th>
+            <td mat-cell *matCellDef="let element"> {{element.specialty}} </td>
+        </ng-container>
+
+        <!-- InterventionNb Column -->
+        <ng-container matColumnDef="interventionNb">
+            <th mat-header-cell *matHeaderCellDef> Number of interventions </th>
+            <td mat-cell *matCellDef="let element"> {{element.interventionNb}} </td>
+        </ng-container>
+
+        <!-- Anaesthetist Column -->
+        <ng-container matColumnDef="anaesthetist">
+            <th mat-header-cell *matHeaderCellDef> Favourite anaesthetist </th>
+            <td mat-cell *matCellDef="let element"> {{element.anaesthetist}} </td>
+        </ng-container>
+
+        <!-- Nurse Column -->
+        <ng-container matColumnDef="nurse">
+            <th mat-header-cell *matHeaderCellDef> Favourite nurse </th>
+            <td mat-cell *matCellDef="let element"> {{element.nurse}} </td>
+        </ng-container>
+
+        <!-- Room Column -->
+        <ng-container matColumnDef="room">
+            <th mat-header-cell *matHeaderCellDef> Most frequented room </th>
+            <td mat-cell *matCellDef="let element"> {{element.room}} </td>
+        </ng-container>
+
+        <!-- Intervention Column -->
+        <ng-container matColumnDef="intervention">
+            <th mat-header-cell *matHeaderCellDef> Most frequent intervention </th>
+            <td mat-cell *matCellDef="let element"> {{element.intervention}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</cdk-virtual-scroll-viewport>
